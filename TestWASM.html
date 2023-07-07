@@ -2,38 +2,33 @@
 <html>
 <head>
     <title>Test ChinesePostmanProblem</title>
-    <script src="ChinesePostmanProblem.js"></script>
 </head>
 <body>
     <h1>Test ChinesePostmanProblem</h1>
 
     <button id="runButton">Run</button>
 
-    <script>
-        window.test = `10
-15
-0 1 1
-0 4 3
-1 2 0
-1 4 10
-2 3 9
-2 5 2
-2 6 7
-3 6 3
-4 5 4
-4 7 2
-5 7 6
-6 8 4
-6 9 2
-7 8 1
-8 9 5`
-        const runButton = document.getElementById('runButton');
-        runButton.addEventListener('click', () => {
-            // Run the main function.
-            console.log('???')
-            const res = Module.calculate(test)
-            console.log(res)
-        });
+    <script type="module">
+        import cpp from './index.js'
+        const result = await cpp(10, 15, [
+            [ 0, 1, 1 ],
+            [ 0, 4, 3 ],
+            [ 1, 2, 0 ],
+            [ 1, 4, 10 ],
+            [ 2, 3, 9 ],
+            [ 2, 5, 2 ],
+            [ 2, 6, 7 ],
+            [ 3, 6, 3 ],
+            [ 4, 5, 4 ],
+            [ 4, 7, 2 ],
+            [ 5, 7, 6 ],
+            [ 6, 8, 4 ],
+            [ 6, 9, 2 ],
+            [ 7, 8, 1 ],
+            [ 8, 9, 5 ]
+        ])
+
+        console.log('RESULT', result)
     </script>
 </body>
 </html>

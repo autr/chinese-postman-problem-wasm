@@ -1,0 +1,24 @@
+{
+  "name": "chinese-postman-problem",
+  "version": "1.0.0",
+  "description": "Solve shortest route along all edges using Chinese Postman Problem algorithm (WASM).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libinter/chinese-postman-problem.git"
+  },
+  "keywords": [
+    "cpp",
+    "chinese-postman-problem",
+    "wasm"
+  ],
+  "author": "Autr",
+  "bugs": {
+    "url": "https://github.com/libinter/chinese-postman-problem/issues"
+  },
+  "homepage": "https://github.com/libinter/chinese-postman-problem#readme"
+}

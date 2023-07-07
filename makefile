@@ -21,4 +21,4 @@ AppWASM.o: AppWASM.cpp Dijkstra.h ./Minimum-Cost-Perfect-Matching/Matching.h ./M
 	em++ $(WASM_FLAG) -c AppWASM.cpp -o AppWASM.o
 
 wasm: Matching.o BinaryHeap.o Graph.o AppWASM.o
-	em++ --bind $(WASM_FLAG) Matching.o BinaryHeap.o Graph.o AppWASM.o -o ChinesePostmanProblem.js
+	em++ --bind $(WASM_FLAG) --export-module Matching.o BinaryHeap.o Graph.o AppWASM.o -o ChinesePostmanProblem.mjs 

@@ -58,12 +58,12 @@ string calculate(string graphData)
 	    //Solve the problem
 	    pair< list<int> , double > sol = ChinesePostman(G, cost);
 
-		result += "\tcost: " + to_string(sol.second) + ",\n";
+		result += "\t\"totalCost\": " + to_string(sol.second) + ",\n";
 
 		list<int> s = sol.first;
 
         //Print edges in the solution
-		result += "\tresult: [";
+		result += "\t\"result\": [";
 		for(list<int>::iterator it = s.begin(); it != s.end(); it++) {
 			result += to_string(*it); 
 			if (next(it) != s.end()) { result += ", "; }
@@ -71,7 +71,7 @@ string calculate(string graphData)
 		result += "]\n";
 	} catch(const char * msg)
 	{
-		result += "error: '" + string(msg) + "'\n";
+		result += "\"error\": '" + string(msg) + "'\n";
 	}
 
 	result += "}";
