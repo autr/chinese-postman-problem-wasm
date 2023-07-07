@@ -1,3 +1,7 @@
+# Forked - WASM Module
+
+Forked, compiled with emscriptem  / web assembly, and converted into npm module.
+
 # A C++ solution for the chinese postman problem
 
 To clone the repo and its dependencies (submodules): 
